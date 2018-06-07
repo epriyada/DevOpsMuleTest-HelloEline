@@ -20,14 +20,24 @@
 
 	<build>
 		<plugins>
-			<plugin>
+			
+			<plugins>
 				<groupId>org.mule.tools.maven</groupId>
 				<artifactId>mule-maven-plugin</artifactId>
-				<version>${mule.maven.plugin.version}</version>
+				<version>3.0.0</version>
 				<extensions>true</extensions>
 				<configuration>
+					<armDeployment>
+						<username>epriyada</username>
+						<password>Radio@143</password>
+						<targetType>server</targetType>
+						<environment>Production</environment>
+						<target>helloeline</target>
+					</armDeployment>
 				</configuration>
-			</plugin>
+			</plugins>
+			
+			
 		</plugins>
 	</build>
 
