@@ -21,21 +21,24 @@
 	<build>
 		<plugins>
 			
-			<plugins>
-				<groupId>org.mule.tools.maven</groupId>
-				<artifactId>mule-maven-plugin</artifactId>
-				<version>3.0.0</version>
-				<extensions>true</extensions>
-				<configuration>
-					<armDeployment>
-						<username>epriyada</username>
-						<password>Radio@143</password>
-						<targetType>server</targetType>
-						<environment>Production</environment>
-						<target>helloeline</target>
-					</armDeployment>
-				</configuration>
-			</plugins>
+			<plugin>
+			    <groupId>org.mule.tools.maven</groupId>
+			    <artifactId>mule-maven-plugin</artifactId>
+			    <version>3.0.0</version>
+			    <extensions>true</extensions>
+			    <configuration>
+				<cloudHubDeployment>
+				    <username>epriyada</username>
+				    <password>Radio@143</password>
+				    <environment>Production</environment>
+				    <applicationName>helloeline</applicationName>
+				    <muleVersion>3.0.0</muleVersion> <!-- This is the runtime version as it appears on the CloudHub interface -->
+				    <properties>
+					<key>value</key>
+				    </properties>
+				</cloudHubDeployment>
+			    </configuration>
+			</plugin>
 			
 			
 		</plugins>
